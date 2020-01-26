@@ -15,7 +15,8 @@ class Classroom:
                     break
         if(f==0):
             return ss
-                    class Classroom:
+'''
+class Classroom:
     classroom_list=['G015', 'G066', 'L123', 'L135', 'L143', 'L13']
     
     @staticmethod
@@ -34,3 +35,4 @@ class Classroom:
             return ss
 c=Classroom()
 print(c.search_classroom('L135'))
+'''
