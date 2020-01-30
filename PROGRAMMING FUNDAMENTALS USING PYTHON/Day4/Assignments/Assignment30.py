@@ -16,3 +16,18 @@ def encode(message):
     
 encoded_message=encode("ABBBBCCCCCCCCAB")
 print(encoded_message)
+
+'''
+#PF-Assgn-30
+from itertools import groupby
+def encode(message):
+    s=''
+    for i,c in groupby(message):
+        s+=str(len(list(c)))+i
+    #Remove pass and write your logic here
+    return s
+
+#Provide different values for message and test your program
+encoded_message=encode("ABBBBCCCCCCCCAB")
+print(encoded_message)
+'''

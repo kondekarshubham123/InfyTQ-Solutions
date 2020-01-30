@@ -1,0 +1,11 @@
+//PF-Exer-13
+var num1=5
+var num2=5
+if(num1==num2){
+    console.log(num1+num2)
+}
+else{
+    console.log((num1+num2)*2)
+}
+
+//Write your code here

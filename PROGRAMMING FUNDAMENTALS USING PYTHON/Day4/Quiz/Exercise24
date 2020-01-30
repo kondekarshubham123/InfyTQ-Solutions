@@ -1,0 +1,15 @@
+//PF-Exer-24
+//This verification is based on string match.
+
+package main
+
+import ("fmt")
+
+func find_square(num int)(int){
+    return num*num
+}
+func main() {
+    //Write your program logic here
+    var num int=3
+    fmt.Println(find_square(num))
+}

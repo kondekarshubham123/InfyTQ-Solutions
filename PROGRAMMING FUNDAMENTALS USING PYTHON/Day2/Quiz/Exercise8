@@ -1,0 +1,17 @@
+//PF-Exer-8
+//This verification is based on string match.
+
+package main
+import ("fmt")
+func main(){
+    var finalFee int
+    var Course_Fee int=25000
+    var Marks int=70
+    var Extra_fee int=1500
+    //Write your program logic here
+    //Populate the variable: finalFee
+    finalFee=(Course_Fee-Course_Fee*(Marks/2)/100)+Extra_fee
+
+     //Do not modify the below print statement for verification to work
+     fmt.Println(finalFee) 
+}

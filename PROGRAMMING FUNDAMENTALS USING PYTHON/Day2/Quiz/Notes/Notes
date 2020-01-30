@@ -1,0 +1,80 @@
+
+>>>>Go lang if else
+package main
+import(
+    "fmt"
+)
+func main(){
+
+    var passengerName string="John"
+    var passportStatus string="valid"
+    var ticketStatus string="Confirmed"
+    var airline string="Singapore AirLines"
+    var luggageWeight int=300
+    var AIWeightLimit int=30
+    var SIWeightLimit int=35
+    fmt.Println(passengerName)
+    if(passportStatus=="valid"){
+        fmt.Println("Airport security cleared")
+    if(ticketStatus=="Confirmed"){
+            if(airline=="AirIndia"){
+                if(luggageWeight<=AIWeightLimit){
+                    fmt.Println("Check-in cleared")
+                }else{
+        fmt.Println("Check-in not cleared due to extra luggage")
+                }
+            }else if(airline=="Singapore AirLines"){
+                    if(luggageWeight<=SIWeightLimit){
+                        fmt.Println("Check in cleared")
+                    }else{
+                        fmt.Println("Check-in not cleared due to extra luggage")
+                    }
+
+            }else{
+            fmt.Println("Invalid airline")
+        }
+        }else{
+                fmt.Println("Sorry, ticket is not confirmed")
+         }
+    }else{
+        fmt.Println("Sorry, invalid passport")
+    }
+}
+
+>>>>> js if else
+    var passengerName="Mark"
+    var passportStatus="valid"
+    var ticketStatus="Confirmed"
+    var airline="British Airways"
+    var luggageWeight=100
+    var AIWeightLimit=30
+    var BAWeightLimit=35
+    console.log(passengerName)
+    if(passportStatus=="valid")
+    {
+        console.log("Airport security cleared")
+        if(ticketStatus=="Confirmed")
+        {
+            if(airline=="AirIndia")
+            {
+                if(luggageWeight<=AIWeightLimit)
+                     console.log("Check-in cleared")
+                else
+                    console.log("Check-in not cleared due to extra luggage")
+            }
+
+            else if(airline=="British Airways")
+            {
+                if(luggageWeight<=BAWeightLimit)
+                    console.log("Check in cleared")
+                else
+                    console.log("Check-in not cleared due to extra luggage")
+             }
+             else
+            console.log("Invalid airline")
+         }
+         else
+             console.log("Sorry, ticket is not confirmed")
+         }
+    else
+            console.log("Sorry, invalid passport")

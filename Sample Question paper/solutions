@@ -1,0 +1,23 @@
+>>>program1 Solution
+i=int(input())
+while True:
+    r=int(''.join(list(str(i))[::-1]))
+    s=i+r
+    if (s==int(''.join(list(str(s))[::-1]))):
+        print(s)
+        break
+    else:
+        i=s
+
+        
+>>>program2 SOlution
+import re
+i=input()
+result=''
+for x in i:
+    if x.isdigit():
+        result+=x
+if (re.search('^-',i)==None):
+    print(result)
+else:
+    print('-'+result)

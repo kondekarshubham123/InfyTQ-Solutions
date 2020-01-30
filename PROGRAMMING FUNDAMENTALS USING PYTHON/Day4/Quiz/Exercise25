@@ -1,0 +1,15 @@
+//JS-Exer-25
+
+//Start writing your code here
+num = 6
+function find_sum(nb){
+    i=0
+    s=0
+    while (i<num+1)
+    {
+        s=s+i
+        i=i+1
+    }
+    return s
+}
+console.log(find_sum(5))

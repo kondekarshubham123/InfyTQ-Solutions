@@ -1,0 +1,38 @@
+>>>>Go Lang
+package main
+
+import (
+"fmt"
+)
+
+func allocateHotel(travelClass string,name string){
+  if(travelClass=="Business"){
+    fmt.Println(name,"has been allocated a suite room.")
+  }else if(travelClass=="Economy"){
+    fmt.Println(name,"has been allocated a deluxe room.")
+  }else{
+    fmt.Println("Invalid travel class.")
+  }
+}
+
+func main(){
+  var travelClass string="Business"
+  var name string="Tom"
+  allocateHotel(travelClass,name)
+}
+
+
+>>>>js
+function allocateHotel(travelClass,name){
+	if(travelClass=="Business"){
+		console.log(name+" has been allocated a suite room.")
+	}
+	else if(travelClass=="Economy"){
+		console.log(name+"has been allocated a deluxe room.")
+	}
+	else{
+		console.log("Invalid travel class.")
+	}
+}
+
+allocateHotel("Business","Tom")
