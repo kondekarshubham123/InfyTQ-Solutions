@@ -1,0 +1,39 @@
+>>Exercise 3
+CREATE TABLE PLAYER(
+Pid INTEGER CONSTRAINT plr_pid_pk PRIMARY KEY,
+PName VARCHAR2(20) CONSTRAINT plr_pnm_nn NOT NULL,
+Ranking INTEGER);
+
+>>Exercise 4
+CREATE TABLE Tournament(
+TId INTEGER CONSTRAINT trnmt_tid_pk PRIMARY KEY,
+TName VARCHAR2(30) CONSTRAINT trnmt_tnm_nn NOT NULL,
+StartDt DATE CONSTRAINT trnmt_sdt_nn NOT NULL,
+EndDt DATE CONSTRAINT trnmt_edt_nn NOT NULL,
+Prize INTEGER CONSTRAINT trnmt_pz_nn NOT NULL);
+
+>>Exercise 5
+
+CREATE TABLE Match(
+MId INTEGER ,
+TId INTEGER CONSTRAINT match_tid_fk REFERENCES Tournament(TId),
+Player1 INTEGER CONSTRAINT match_player1_fk REFERENCES Player(PId),
+Player2 INTEGER CONSTRAINT match_player2_fk REFERENCES Player(PId),
+MatchDt DATE NOT NULL,
+Winner INTEGER CONSTRAINT match_winner_fk REFERENCES Player(PId),
+Score VARCHAR2(30) NOT NULL,
+CONSTRAINT match_mid_pk PRIMARY KEY(MId,TId),
+CONSTRAINT match_player_ck CHECK(Player1<>Player2)
+)
+
+>> Exercise 6
+ALTER TABLE PLAYER ADD (MatchesPlayed INTEGER,MatchesWon INTEGER);
+
+>> Exercise 7
+ALTER TABLE Player DROP(ContactNo);
+
+>> Exercise 8
+ALTER TABLE Player RENAME COLUMN PID TO PlayerId;
+
+>> Exercise 9
+ALTER TABLE Player MODIFY PName Varchar2(50);
