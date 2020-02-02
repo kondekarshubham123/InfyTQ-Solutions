@@ -30,6 +30,16 @@ ManagerName VARCHAR2(30) unique);
 Alter table Store RENAME COLUMN Name to StoreName;
 
 >> Assignment 7 (Try)
+create table Bill(
+BillNo NUMBER PRIMARY KEY,
+StoreName VARCHAR2(20) REFERENCES Store(StoreName),
+Shopperid NUMBER REFERENCES Shopper(ShopperID),
+ArCode CHAR(5) REFERENCES Article(ArCode),
+Amount NUMBER,
+BillDate Date Default sysdate
+Quantity Number(4) Default  1 check(Quantity>0)
+);
+
 
 >> Assignment 8
 CREATE TABLE Supplier(
