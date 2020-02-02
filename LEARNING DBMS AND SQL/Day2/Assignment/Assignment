@@ -1,0 +1,64 @@
+>>Assignment 2 (Try)
+CREATE TABLE Shopper(
+Shopperid INTEGER PRIMARY KEY,
+ShopperName varchar2(20) CONSTRAINT shpr_shpnm_nn NOT NULL,
+GENDER varchar2(6) check(GENTER IN ('Male','Female')),
+MobileNo NUMBER(10) CONSTRAINT shpr_mn_nn NOT NULL,
+Address varchar2(50));
+
+>> Assignment 3
+ALTER TABLE Shopper MODIFY MobileNo Varchar2(15);
+
+>> Assignment 4 (Try)
+CREATE TABLE Article(
+  ArCode CHAR(5) CONSTRAINT arcode_article_pk PRIMARY KEY,
+  CHECK(ArCode LIKE 'A%'),
+  ArName VARCHAR2(30) CONSTRAINT article_name NOT NULL,
+  Rate NUMBER(8,2),
+  Quantity NUMBER(4) DEFAULT 0,
+  CHECK(Quantity >=0),
+  Class CHAR(1) CONSTRAINT Artice_class_ch CHECK(Class IN('A', 'B', 'C'))
+)
+
+>> Assignment 5
+create table Store(
+Name VARCHAR2(20) PRIMARY KEY,
+Location VARCHAR2(30) NOT NULL,
+ManagerName VARCHAR2(30) unique);
+
+>> Assignment 6
+Alter table Store RENAME COLUMN Name to StoreName;
+
+>> Assignment 7 (Try)
+
+>> Assignment 8
+CREATE TABLE Supplier(
+Supplierid VARCHAR2(6) PRIMARY KEY,
+Name VARCHAR2(30),
+ContactNo VARCHAR2(15) NOT NULL,
+Emailid VARCHAR2(30));
+
+>> Assignment 9
+ALTER Table Supplier ADD City varchar2(10);
+
+>> Assignment 10
+ALTER Table Supplier DROP(Emailid);
+
+>> Assignment 11
+create table City(
+City Varchar2(20) CONSTRAINT cityname unique);
+
+>> Assignment 12 (Can not drop all COLUMN in table)
+alter table City Drop(City);
+
+>> Assignment 13 (Try)
+Create TABLE Address(
+HouseNo Number,
+Street VARCHAR2(30),
+city VARCHAR2(20) constraint add_cty_fk REFERENCES City(City),
+zip NUMBER(6) check(zip>=0),
+state VARCHAR2(5),
+CONSTRAINT add_pk PRIMARY KEY(HouseNo,Street,city));
+
+>> Assignment 14 (Try)
+ALTER TABLE Address MODIFY state VARCHAR2(20);
