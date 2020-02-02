@@ -1,0 +1,100 @@
+Assignment 15
+INSERT INTO Shopper VALUES(101,'Mark Jane','Male',1234567890,'Allen Street, New York')
+
+Assignment 16
+INSERT INTO Article Values('A1001','Mouse',500,0,'C')
+
+Assignment 17
+INSERT INTO Store Values('Loyal World','Infy Campus, Mysore','Rohan Kumar');
+
+Assignment 18
+INSERT INTO BILL VALUES(1001,'Loyal World',101,'A1001',1000,'20-OCT-15',2);
+
+Assignment 19
+INSERT INTO Supplier Values('S501','Avaya Ltd',9012345678,'Mysore');
+
+Assignment 20
+SELECT DESCR, PRICE FROM ITEM WHERE DESCR LIKE '%Hard disk%'
+
+Assignment 21
+SELECT * FROM Quotation WHERE QSTATUS = 'Rejected' or QSTATUS='Closed';
+
+Assignment 22
+SELECT DESIGNATION,SALARY FROM EmpDetails WHERE DESIGNATION='Manager' or DESIGNATION='Billing Staff';
+
+Assignment 23
+SELECT ROID,LOCATION FROM RetailOutlet WHERE MANAGERID IS NULL;
+
+Assignment 24
+SELECT ORDERID,QUOTATIONID,STATUS FROM ORDERS WHERE ORDERDATE BETWEEN '1-Dec-2014' AND '1-Jan-2015';
+
+Assignment 25
+Method 1:
+Here, output matches but it has Logical Errors
+
+SELECT ItemCode, Descr, Price FROM Item WHERE 
+Descr LIKE '%Shirt%' 
+OR 
+Descr LIKE '%Skirt%' 
+AND
+Category='B' 
+
+Method - 2:
+Matches Exactly
+Reason: This is an optimized query because we are searching from a small list of items filtered using Category first and then Descr.
+SELECT ItemCode, Descr, Price FROM Item WHERE 
+Category='B' AND
+Descr LIKE '%Shirt%' 
+OR
+Descr LIKE '%Skirt%'  
+
+Assignment 26
+select DISTINCT designation,salary from EmpDetails
+
+Assignment 27
+SELECT ITEMCODE,DESCR,PRICE FROM ITEM
+
+Assignment 28
+SELECT QUOTATIONID,SNAME FROM QUOTATION WHERE QSTATUS IN ('Accepted','Rejected')
+
+Assignment 29
+SELECT ITEMCODE,DESCR,PRICE FROM Item where DESCR LIKE '_r%'
+
+Assignment 30
+select Distinct ItemType from Item
+
+Assignment 31
+SELECT ORDERID,QUOTATIONID,STATUS,PYMTDATE FROM ORDERS WHERE AMOUNTPAID IS NULL
+
+Assignment 32
+SELECT DISTINCT ITEMTYPE,CATEGORY FROM ITEM
+
+Assignment 33
+SELECT EMPID, SALARY AS "Current Salary",SALARY*1.1 AS "New Salary",SALARY*1.1-SALARY AS "Incremented Amount" FROM EmpDetails
+
+Assignment 34
+Insert into City values('Mysore')
+
+Assignment 35
+INSERT INTO ADDRESS VALUES(350,'Electronics City','Mysore',570018,'Karnataka')
+
+Assignment 36
+INSERT INTO Article values('A1002','Keyboard',1000,10,'B')
+
+Assignment 37
+SELECT QUOTATIONID,QDATE,QUOTEDPRICE FROM Quotation WHERE QUOTEDPRICE BETWEEN 1401 AND 2149
+
+Assignment 38
+SELECT ITEMTYPE,DESCR,PRICE FROM Item where price>4000
+
+Assignment 39
+SELECT DESIGNATION,SALARY FROM Empdetails where Salary BETWEEN 2500 AND 5000
+
+
+
+
+
+
+
+
+

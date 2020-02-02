@@ -1,0 +1,38 @@
+>> Exercise 10
+INSERT INTO Salesman VALUES(11,'Elizabeth','London');
+
+>> Exercise 11
+INSERT INTO Product Values(110,'Bat',50,'Sports',NULL);
+
+>> Exercise 12
+select * FROM Product;
+
+>> Exercise 13
+SELECT PRODID,PRICE,Category FROM Product;
+
+>> Exercise 14
+SELECT DISTINCT CATEGORY From Product;
+
+>> Exercise 15
+SELECT PRODID,PDESC,CATEGORY,DISCOUNT FROM Product WHERE CATEGORY='Apparel';
+
+>> Exercise 16
+SELECT PRODID,PDESC,CATEGORY,DISCOUNT FROM Product WHERE PDESC IS NULL;
+
+>> Exercise 17
+SELECT PRODID,PDESC,CATEGORY,DISCOUNT FROM Product WHERE CATEGORY='Apparel' AND DISCOUNT>5;
+
+>> Exercise 18
+UPDATE Product set DISCOUNT=25 WHERE CATEGORY = 'Sports';
+
+>> Exercise 19
+UPDATE PRODUCT SET PRICE = 50 WHERE CATEGORY = 'Apparel' and PDESC='Trouser';
+
+>> Exercise 20
+UPDATE Salesman SET SNAME='Jenny',LOCATION='Bristol' where SID=3;
+
+>> Exercise 21
+DELETE SaleDetail where SALEID = '1004';
+
+>> Exercise 22
+DELETE SaleDetail WHERE QUANTITY>5;
