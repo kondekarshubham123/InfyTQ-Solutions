@@ -28,7 +28,7 @@ def test_problem6():
     assert solutions.Problem6([1, 2, 3, 4], 1)==[[1], [2], [3], [4]]
     assert solutions.Problem6([2,1, 4, 3], 2)==[[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
     assert solutions.Problem6([1, 2, 3, 4], 5)==[]
-    assert solutions.Problem6([1, 2, 3, 4], 5)==[[]]
+    assert solutions.Problem6([1, 2, 3, 4], 0)==[[]]
 
 def test_problem7():
     assert solutions.Problem7({"cost_price": 32.67,  "sell_price": 45.00,  "inventory": 1200})==147968
