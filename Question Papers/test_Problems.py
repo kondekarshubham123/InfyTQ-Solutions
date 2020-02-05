@@ -12,7 +12,7 @@ def test_problem2():
 def test_problem3():
     assert solutions.Problem3("[50% Off!][Group Tours Included] 5-Day Trip to Onsen [Kyoto]")=="Kyoto"
     assert solutions.Problem3('Cheese Factory Tour [Portland]')=="Portland"
-    assert solutions.Problem3('Last Day!] Beer Festival [Munich]')=='Munich'
+    assert solutions.Problem3('[Last Day!] Beer Festival [Munich]')=='Munich'
 
 def test_problem4():
     assert solutions.Problem4([1, 2, 3, 4], [4, 3, 2, 1] )==True
@@ -31,7 +31,7 @@ def test_problem6():
     assert solutions.Problem6([1, 2, 3, 4], 0)==[[]]
 
 def test_problem7():
-    assert solutions.Problem7({"cost_price": 32.67,  "sell_price": 45.00,  "inventory": 1200})==147968
+    assert solutions.Problem7({"cost_price": 32.67,  "sell_price": 45.00,  "inventory": 1200})==14796
     
 def test_problem8():
     assert solutions.Problem8("abcde", "cab")==2

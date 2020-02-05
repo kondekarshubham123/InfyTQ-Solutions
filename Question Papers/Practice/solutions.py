@@ -9,8 +9,7 @@ def Problem3(s):
     for i in s.split('[')[::-1]:
         if ']'in i:
             return i[:-1]
-            
-
+print(Problem3('[Last Day!] Beer Festival [Munich]'))
 # Problem4
 def Problem4(l1,l2):
     test,ret=sum(list(zip(l1,l2))[0]),True
@@ -31,8 +30,9 @@ def Problem6(l,i):
         ret.append(list(i))
     return ret
 
-def Problem7(d):
-    pass
+Problem7 = lambda d:int(round((d["sell_price"]-d["cost_price"])*d["inventory"]))
+
+
 def Problem8(s1,s2):
     pass
 
