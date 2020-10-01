@@ -1,4 +1,4 @@
-# InfyTQ-Solutions
+# Infosys Infytq Solutions
 
 <div style="text-align: justify">
 InfyTQ is a free platform open to all engineering students in their third and fourth year across India. The platform encourages holistic development by imparting technical as well as professional skills and help them become industry ready.
@@ -13,4 +13,5 @@ https://infytq.infosys.com - automatic!
 
 
 #### Would love to include your solutions into this repo! 
-_Happy reviewing! :octocat:_
+#### You can also add the video which explaning the code
+_Happy reviewing Happy Coding!:octocat:_
